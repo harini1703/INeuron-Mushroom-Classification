@@ -15,14 +15,14 @@ if nav=='Home':
   st.write("A mushroom or toadstool is the fleshy, spore-bearing fruiting body of a fungus, typically produced above ground, on soil, or on its food source.Toadstool generally denotes one poisonous to humans.Mushroom can be differentiated as Edible and Poisonous")
   st.write("According to statistics China is a major edible mushroom producer.The country produces about half of all cultivated mushrooms, and around 2.7 kilograms (6.0 lb) of mushrooms are consumed per person per year by 1.4 billion people")
   st.write("The total mushroom production in India between 2010 and 2017 was approximately 0.13 million tons, accounting for a 4.3% increase in the average growth rate of mushrooms per annum. In particular, the total production of white button mushrooms is the highest, with a share of about 73% of total mushroom production.")
-  st.image("/content/drive/MyDrive/chartmushroom.png",width=500)
+  st.image("chartmushroom.png",width=500)
   st.header("Edible and Poisonous:")
   st.subheader("Poisonous:")
   st.write("Many mushroom species produce secondary metabolites that can be toxic.Although there are only a small number of deadly species, several others can cause particularly severe and unpleasant symptoms.The death cap is the most poisonous mushroom in the world.The death cap is found throughout Europe and closely resembles edible straw mushrooms and caesar’s mushrooms.It is estimated that as little as half a mushroom contains enough toxin to kill an adult human.It has been involved in the majority of human deaths from mushroom poisoning")
-  st.image("/content/drive/MyDrive/mushroom image1.jpg",width=400)
+  st.image("mushroom image1.jpg",width=400)
   st.subheader("Edible:")
   st.write("Edible mushrooms are the fleshy and edible fruit bodies of several species of macrofungi.Edibility may be defined by criteria that include absence of poisonous effects on humans and desirable taste and aroma. Edible mushrooms are consumed for their nutritional and culinary value. Mushrooms, especially dried shiitake, are sources of umami flavor.Mushrooms are cultivated in at least 60 countries.A fraction of the many fungi consumed by humans are currently cultivated and sold commercially. Commercial cultivation is important ecologically, as there have been concerns of depletion of larger fungi such as chanterelles in Europe, possibly because the group has grown popular, yet remains a challenge to cultivate.")
-  st.image("/content/drive/MyDrive/edible30.jpg",width=500) 
+  st.image("edible30.jpg",width=500) 
   
 
   
@@ -89,7 +89,7 @@ if nav=='Dataset':
   st.header("About the Dataset:")
   st.write("Although this dataset was originally contributed to the UCI Machine Learning repository nearly 30 years ago, mushroom hunting is enjoying new peaks in popularity.")
   st.write("This dataset includes descriptions of hypothetical samples corresponding to 23 species of gilled mushrooms in the Agaricus and Lepiota Family Mushroom drawn from The Audubon Society Field Guide to North American Mushrooms (1981). Each species is identified as definitely edible, definitely poisonous, or of unknown edibility and not recommended. This latter class was combined with the poisonous one. The Guide clearly states that there is no simple rule for determining the edibility of a mushroom; no rule like leaflets three, let it be for Poisonous Oak and Ivy.")
-  dataset=pd.read_csv("/content/drive/MyDrive/mushrooms.csv")
+  dataset=pd.read_csv("mushrooms(1).csv")
   if st.checkbox("Show the data"):
     st.dataframe(dataset)
     
