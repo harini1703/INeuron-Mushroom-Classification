@@ -10,7 +10,7 @@ st.title(" MUSHROOM PREDICTION APPLICATION")
 nav=st.sidebar.radio('Navigation',["Home",'Prediction','Dataset','User'])
 
 if nav=='Home':
-  st.image("/content/drive/MyDrive/mushroom image.jpg",width=400)
+  st.image("mushroom image.jpg",width=400)
   st.header("Mushroom-A Fungi:")
   st.write("A mushroom or toadstool is the fleshy, spore-bearing fruiting body of a fungus, typically produced above ground, on soil, or on its food source.Toadstool generally denotes one poisonous to humans.Mushroom can be differentiated as Edible and Poisonous")
   st.write("According to statistics China is a major edible mushroom producer.The country produces about half of all cultivated mushrooms, and around 2.7 kilograms (6.0 lb) of mushrooms are consumed per person per year by 1.4 billion people")
