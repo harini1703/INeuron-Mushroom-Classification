@@ -7,7 +7,7 @@ import pandas as pd
 import numpy as np
 
 st.title(" MUSHROOM PREDICTION APPLICATION")
-nav=st.sidebar.radio('Navigation',["Home",'Prediction','Dataset','User'])
+nav=st.sidebar.radio('Navigation',["Home",'Prediction','Dataset'])
 
 if nav=='Home':
   st.image("mushroom image.jpg",width=400)
@@ -31,52 +31,289 @@ if nav=='Home':
 
 
 if nav=='Prediction':
- st.subheader("MUSHROOM PREDICTOR:")
- st.write('CAP-SHAPE: _Convex-0, Flat-1 ,Knobbed-2 , Bell-3 , Sunken-4 , Conical-5_')
- a=st.selectbox("SELECT THE CAP-SHAPE:",(0,1,2,3,4,5))
- st.write('CAP-SURFACE: _Scaly-0 , Smooth-1 , Fibrous-2 , Grooves-3_')
- b=st.selectbox('SELECT THE CAP-SURFACE:',(0,1,2,3))
- st.write('CAP-COLOR: _Brown-0 , Gray-1 , Red-2 , Yellow-3 , White-4 , Buff-5 , Pink-6 , Cinnanmon-7, Purple-8, Green-9_')
- c=st.selectbox("SELECT THE CAP-COLOR:",(0,1,2,3,4,5,6,7,8,9))
- st.write('BRUISES:_Yes-1,No-0_')
- d=st.selectbox("SELECT STATE OF BRUISES:",(0,1))
- st.write('ODOR:_None-0,Foul-1,Fishy-2,Spicy-3,Almond-4,Anise-5,Pungent-6,Creosote-8,Musty-8_')
- e=st.selectbox("SELECT THE ODOR:",(0,1,2,3,4,5,6,7,8))
- st.write("GILL-ATTACHMENT:_Free-0,Notched:1_")
- f=st.selectbox("SELECT TYPE OF GILL ATTACHMENT:",(0,1))
- st.write("GILL-SPACING:_Close:0,Crowded:1_")
- g=st.selectbox("SELECT TYPE OF GILL SPACING:",(0,1))
- st.write("GILL-SIZE:_Broad-0,Narrow-1")
- h=st.selectbox("SELECT THE GILL SIZE:",(0,1))
- st.write("GILL-COLOR:_Buff-0,Pink-1,White-2,Brown-3,Gray-4,Chocolate-5,Purple-6,Black-7,Red-8,Yellow-9,Orange-10,Green-11_")
- i=st.selectbox("SELECT THE GILL COLOR:",(0,1,2,3,4,5,6,7,8,9,10,11))
- st.write("STALK-SHAPE:_Tapering-0,Enlarging-1")
- j=st.selectbox("SELECT THE STALK SHAPE:",(0,1))
- st.write('STALK ROOT:_Bulbous-0, None-1,Equal-2,Cup-3,Rhizomorphs-4_')
- k=st.selectbox('SELECT THE STALK ROOT:',(0,1,2,3,4))
- st.write("STALK-SURFACE-ABOVE-RING:_Smooth-0,Silky-1,Fibrous-2,Scaly-3_")
- l=st.selectbox(" SELECT SURFACE TYPE ABOVE RING:",(0,1,2,3))
- st.write("STALK-SURFACE-BELOW-RING:_Smooth-0,Silky-1,Fibrous-2,Scaly-3_")
- m=st.selectbox("SELECT SURFACE TYPE BELOW RING:",(0,1,2,3))
- st.write("STALK-COLOR-ABOVE-RING:_White-0,Pink:1,Gray-2,Brown-3,Buff-4,Orange-5,Red-6,Cinnanmon-7,Yellow-8_")
- n=st.selectbox("SELECT COLOR OF THE ABOVE RING:",(0,1,2,3,4,5,6,7,8))
- st.write("STALK-COLOR-BELOW-RING:_White-0,Pink:1,Gray-2,Brown-3,Buff-4,Orange-5,Red-6,Cinnanmon-7,Yellow-8_")
- o=st.selectbox("SELECT COLOR OF THE BELOW RING:",(0,1,2,3,4,5,6,7,8))
- st.write("VEIL-TYPE:_Partial-0,Universal-1_")
- p=st.selectbox("SELECT THE VEIL TYPE:",(0,1))
- st.write("VEIL-COLOR:_White-0,Brown-1,Orange-2,Yellow-3_")
- q=st.selectbox("SELECT THE VEILCOLOR:",(0,1,2,3))
- st.write("RING-NUMBER:_One-0,Two-1,None-2")
- r=st.selectbox("SELECT THE NUMBER OF RING:",(0,1,2))
- st.write("RING-TYPE:_Pendant-0,Evanescent-1,Large-2,Flaring-3,None-4")
- s=st.selectbox("SELECT YOUR RING TYPE:",(0,1,2,3,4))
- st.write("SPORE-PRINT-COLOR:_White-0,Brown-1,Black-2,Chocolate-3,Green-4,Purple-5,Orange-6,Yellow-7,Buff-8_")
- t=st.selectbox("SELECT THE SPORE PRINT COLOR:",(0,1,2,3,4,5,6,7,8))
- st.write("POPULATION:_Several-0,Solitary-1,Scattered-2,Numerous-3,Abundant-4,Clustered-5_")
- u=st.selectbox("SELECT THE POPULATION STATE:",(0,1,2,3,4,5))
- st.write("HABITAT:_Woods-0,Grasses-1,Path-2,Leaves-3,Urban-4,Meadows-5,Waste-6_")
- v=st.selectbox("SELECT THE HABITAT TYPE:",(0,1,2,3,4,5,6))
+a=st.selectbox("SELECT THE CAP-SHAPE:",('Convex','flat','Knoobed','Bell','Sunken','Conical'))
+if a=='Convex':
+ a=0
+elif a=='Flat':
+  a=1
+elif a=='Knobbed':
+  a=2    
+elif a=='Bell':
+  a=3
+elif a=='Sunken':
+  a=4
+else:
+  a=5  
 
+b=st.selectbox('SELECT THE CAP-SURFACE:',('Scaly','Smooth','Fibrous','Grooves'))
+if b=='Scaly':
+ b=0
+elif b=='Smooth':
+  b=1
+elif b=='Fibrous':
+  b=2    
+else:
+  b=3
+
+c=st.selectbox("SELECT THE CAP-COLOR:",('Brown','Gray','Red','Yellow','White','Buff','Pink','Cinnanmon','Purple', 'Green'))
+if c=='Brown':
+ c=0
+elif c=='Gray':
+  c=1
+elif c=='Red':
+  c=2
+elif c=="Yellow":
+  c=3
+elif c=='White':
+  c=4
+elif c=="Buff":
+  c=5
+elif c=="Pink":
+  c=6
+elif c=="Cinnanmon":
+  c=7
+elif c=="Purple":
+  c=8    
+else:
+  c=9
+
+d=st.selectbox("SELECT STATE OF BRUISES:",('No','Yes'))
+if d=='yes':
+  d=1
+else:
+  d=0  
+
+e=st.selectbox("SELECT THE ODOR:",('None','Foul','Fishy','Spicy','Almon','Anise','Pungent','Creosote','Musty'))
+if e=='None':
+ e=0
+elif e=='Foul':
+  e=1
+elif e=='Fishy':
+  e=2
+elif e=="Spicy":
+  e=3
+elif e=='Almond':
+  e=4
+elif e=="Anise":
+  e=5
+elif e=="Pungent":
+  e=6
+elif e=="Creosote":
+  c=7
+else:
+  c=8
+
+f=st.selectbox("SELECT TYPE OF GILL ATTACHMENT:",('Free','Notched'))
+if f=='Free':
+  f=0
+else:
+  f=1  
+
+g=st.selectbox("SELECT TYPE OF GILL SPACING:",('Close','Crowded'))
+if g=='Close':
+   g=0
+else:
+   g=1   
+
+h=st.selectbox("SELECT THE GILL SIZE:",('Broad','Narrow'))
+if h=='Broad':
+  h=0
+else:
+  h=1  
+
+i=st.selectbox("SELECT THE GILL COLOR:",('Buff','Pink','White','Brown','Gray','Chocolate','Purple','Black','Red','Yellow','Orange', 'Green'))
+if i=='Buff':
+ i=0
+elif i=='Pink':
+  i=1
+elif i=='White':
+  i=2
+elif i=="Brown":
+  i=3
+elif i=='White':
+  i=4
+elif i=="Brown":
+  i=5
+elif i=="Gray":
+  i=6
+elif i=="Chocolate":
+  i=7
+elif i=="Purple":
+  i=8    
+elif i=='Black':
+  i=9
+elif i=='Red':
+  i=10
+elif i=='Yellow':
+  i=11
+elif i=='Orange':
+  i=12
+else:
+  i=13      
+
+j=st.selectbox("SELECT THE STALK SHAPE:",('tapering','Enlarging'))
+if j=='Tapering':
+  j=0
+else:
+  j=1   
+
+k=st.selectbox('SELECT THE STALK ROOT:',('Bulbous','None','Equal','Cup','Rhizomorphs'))
+if k=='Bulbous':
+ k=0
+elif k=='None':
+  k=1
+elif k=='Equal':
+  k=2    
+elif k=='Cup':
+  k=3
+else:
+  k=4  
+
+l=st.selectbox(" SELECT SURFACE TYPE ABOVE RING:",('Smooth','Silky','Fibrous','Scaly'))
+if l=='Smooth':
+ l=0
+elif l=='Silky':
+  l=1
+elif l=='Fibrous':
+  l=2    
+else:
+  l=3
+
+m=st.selectbox("SELECT SURFACE TYPE BELOW RING:",('Smooth','Silky','Fibrous','Scaly'))
+if m=='Smooth':
+ m=0
+elif m=='Silky':
+  m=1
+elif m=='Fibrous':
+  m=2    
+else:
+  m=3
+
+n=st.selectbox("SELECT COLOR OF THE ABOVE RING:",('White','Pink','Gray','Brown','Buff','Orange','Red','Cinnanmon', 'Yellow'))
+if n=='White':
+ n=0
+elif n=='Pink':
+  n=1
+elif n=='Gray':
+  n=2
+elif n=="Brown":
+  n=3
+elif n=='Buff':
+  n=4
+elif n=="Orange":
+  n=5
+elif n=="Red":
+  n=6
+elif n=="Cinnanmon":
+  c=7
+else:
+  c=8    
+
+o=st.selectbox("SELECT COLOR OF THE BELOW RING:",('White','Pink','Gray','Brown','Buff','Orange','Red','Cinnanmon', 'Yellow'))
+if n=='White':
+ n=0
+elif n=='Pink':
+  n=1
+elif n=='Gray':
+  n=2
+elif n=="Brown":
+  n=3
+elif n=='Buff':
+  n=4
+elif n=="Orange":
+  n=5
+elif n=="Red":
+  n=6
+elif n=="Cinnanmon":
+  n=7
+else:
+  n=8  
+
+p=st.selectbox("SELECT THE VEIL TYPE:",('partial','Universal'))
+if p=='partial':
+  p=0
+else:
+  p=1  
+
+q=st.selectbox("SELECT THE VEILCOLOR:",('White','Brown',"Orange",'Yellow'))
+if q=='White':
+ q=0
+elif q=='Brown':
+  q=1
+elif q=='Orange':
+  q=2
+else:
+  n=3
+
+r=st.selectbox("SELECT THE NUMBER OF RING:",('One','Two','None'))
+if r=='One':
+ r=0
+elif r=='two':
+  r=1
+else:
+  r=2
+
+s=st.selectbox("SELECT YOUR RING TYPE:",('Pendant','Evanescent','Large','Flaring','None'))
+if s=='Pendant':
+ s=0
+elif s=='Evanescent':
+  s=1
+elif s=='Large':
+  s=2
+elif s=="Flaring":
+  s=3
+else:
+  s=4    
+
+t=st.selectbox("SELECT THE SPORE PRINT COLOR:",('White','Brown','Black',"Chocolate",'Green',"Purple",'Orange','Yellow','Buff'))
+if t=='White':
+ t=0
+elif t=='Brown':
+  t=1
+elif t=='Black':
+  t=2
+elif t=="Chocolate":
+  t=3
+elif t=='Green':
+  t=4
+elif t=="Purple":
+  t=5
+elif t=="Orange":
+  t=6
+elif t=="Yellow":
+  t=7
+else:
+  t=8  
+
+u=st.selectbox("SELECT THE POPULATION STATE:",('Several','Solitary','Scattered','Numerous','Abundant','Clustered'))
+if u=='Several':
+ u=0
+elif u=='Solitary':
+  u=1
+elif u=='Scattered':
+  u=2
+elif u=="Numerous":
+  u=3
+elif u=="Abundant":
+  u=4
+else:
+  u=5
+
+v=st.selectbox("SELECT THE HABITAT TYPE:",('Woods','Grasses','Path','Leaves','Urban','Meadows','Waste'))
+if v=='Woods':
+ v=0
+elif v=='Grasses':
+  v=1
+elif v=='Path':
+  v=2
+elif v=="Leaves":
+  v=3
+elif v=="Urban":
+  u=4
+elif v=="Meadows":
+  u=5  
+else:
+  u=6
 result=''
 if st.button('Predict'):
     result=clf.predict([[a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v]]).squeeze()
@@ -93,8 +330,7 @@ if nav=='Dataset':
   if st.checkbox("Show the data"):
     st.dataframe(dataset)
     
-if nav=='User':
-  st.header("_THANK YOU FOR VISITING OUR APP_!!")
+
 
 
 
