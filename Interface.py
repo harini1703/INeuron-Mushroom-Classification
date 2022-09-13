@@ -31,7 +31,7 @@ if nav=='Home':
 
 
 if nav=='Prediction':
-a=st.selectbox("SELECT THE CAP-SHAPE:",('Convex','flat','Knoobed','Bell','Sunken','Conical'))
+ a=st.selectbox("SELECT THE CAP-SHAPE:",('Convex','flat','Knoobed','Bell','Sunken','Conical'))
 if a=='Convex':
  a=0
 elif a=='Flat':
