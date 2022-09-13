@@ -31,7 +31,8 @@ if nav=='Home':
 
 
 if nav=='Prediction':
- a=st.selectbox("SELECT THE CAP-SHAPE:",('Convex','flat','Knoobed','Bell','Sunken','Conical'))
+  
+a=st.selectbox("SELECT THE CAP-SHAPE:",('Convex','flat','Knoobed','Bell','Sunken','Conical'))
 if a=='Convex':
  a=0
 elif a=='Flat':
@@ -45,7 +46,7 @@ elif a=='Sunken':
 else:
   a=5  
 
- b=st.selectbox('SELECT THE CAP-SURFACE:',('Scaly','Smooth','Fibrous','Grooves'))
+b=st.selectbox('SELECT THE CAP-SURFACE:',('Scaly','Smooth','Fibrous','Grooves'))
 if b=='Scaly':
  b=0
 elif b=='Smooth':
@@ -55,7 +56,7 @@ elif b=='Fibrous':
 else:
   b=3
 
- c=st.selectbox("SELECT THE CAP-COLOR:",('Brown','Gray','Red','Yellow','White','Buff','Pink','Cinnanmon','Purple', 'Green'))
+c=st.selectbox("SELECT THE CAP-COLOR:",('Brown','Gray','Red','Yellow','White','Buff','Pink','Cinnanmon','Purple', 'Green'))
 if c=='Brown':
  c=0
 elif c=='Gray':
