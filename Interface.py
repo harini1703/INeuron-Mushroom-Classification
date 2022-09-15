@@ -32,19 +32,19 @@ if nav=='Home':
 
 if nav=='Prediction':
   
-a=st.selectbox("SELECT THE CAP-SHAPE:",('Convex','flat','Knoobed','Bell','Sunken','Conical'))
-if a=='Convex':
- a=0
-elif a=='Flat':
-  a=1
-elif a=='Knobbed':
-  a=2    
-elif a=='Bell':
-  a=3
-elif a=='Sunken':
-  a=4
-else:
-  a=5  
+  a=st.selectbox("SELECT THE CAP-SHAPE:",('Convex','flat','Knoobed','Bell','Sunken','Conical'))
+  if a=='Convex':
+    a=0
+  elif a=='Flat':
+    a=1
+  elif a=='Knobbed':
+    a=2    
+  elif a=='Bell':
+    a=3
+  elif a=='Sunken':
+    a=4
+  else:
+    a=5  
 
 b=st.selectbox('SELECT THE CAP-SURFACE:',('Scaly','Smooth','Fibrous','Grooves'))
 if b=='Scaly':
