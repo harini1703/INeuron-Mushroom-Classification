@@ -25,7 +25,7 @@ if nav=='Home':
   st.image("edible30.jpg",width=500) 
   
   if nav=='Prediction':
-  st.subheader("MUSHROOM PREDICTOR:")  
+    st.subheader("MUSHROOM PREDICTOR:")  
   if nav=='Prediction':
     st.subheader("MUSHROOM PREDICTOR:")
 
