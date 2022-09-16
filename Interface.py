@@ -146,6 +146,24 @@ elif k=='Cup':
 else:
   k=4  
 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  result=' '
+if st.button('Predict'):
+    result=clf.predict([[a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v]]).squeeze()
+    if result==0:
+        st.success('THE MUSHROOM IS POISONOUS')
+    else:
+        st.success('THE MUSHROOM IS NOT POISONOUS')
 
 
 
