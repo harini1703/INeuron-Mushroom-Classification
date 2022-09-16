@@ -46,8 +46,8 @@ if nav=='Prediction':
   else:
     a=5  
 
-b=st.selectbox('SELECT THE CAP-SURFACE:',('Scaly','Smooth','Fibrous','Grooves'))
-if b=='Scaly':
+ b=st.selectbox('SELECT THE CAP-SURFACE:',('Scaly','Smooth','Fibrous','Grooves'))
+ if b=='Scaly':
  b=0
 elif b=='Smooth':
   b=1
