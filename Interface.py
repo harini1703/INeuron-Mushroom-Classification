@@ -24,10 +24,9 @@ if nav=='Home':
   st.write("Edible mushrooms are the fleshy and edible fruit bodies of several species of macrofungi.Edibility may be defined by criteria that include absence of poisonous effects on humans and desirable taste and aroma. Edible mushrooms are consumed for their nutritional and culinary value. Mushrooms, especially dried shiitake, are sources of umami flavor.Mushrooms are cultivated in at least 60 countries.A fraction of the many fungi consumed by humans are currently cultivated and sold commercially. Commercial cultivation is important ecologically, as there have been concerns of depletion of larger fungi such as chanterelles in Europe, possibly because the group has grown popular, yet remains a challenge to cultivate.")
   st.image("edible30.jpg",width=500) 
   
-  if nav=='Prediction':
-    st.subheader("MUSHROOM PREDICTOR:")  
-  if nav=='Prediction':
-    st.subheader("MUSHROOM PREDICTOR:")
+if nav=='Prediction':
+  st.subheader("MUSHROOM PREDICTOR:")  
+ 
 
   a=st.selectbox("SELECT THE CAP-SHAPE:",('Convex','flat','Knoobed','Bell','Sunken','Conical'))
   if a=='Convex':
