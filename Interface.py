@@ -145,19 +145,155 @@ elif k=='Cup':
   k=3
 else:
   k=4  
+  
+l=st.selectbox(" SELECT SURFACE TYPE ABOVE RING:",('Smooth','Silky','Fibrous','Scaly'))
+if l=='Smooth':
+  l=0
+elif l=='Silky':
+  l=1
+elif l=='Fibrous':
+  l=2    
+else:
+  l=3
+
+m=st.selectbox("SELECT SURFACE TYPE BELOW RING:",('Smooth','Silky','Fibrous','Scaly'))
+if m=='Smooth':
+  m=0
+elif m=='Silky':
+  m=1
+elif m=='Fibrous':
+  m=2    
+else:
+  m=3
 
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  result=' '
+n=st.selectbox("SELECT COLOR OF THE ABOVE RING:",('White','Pink','Gray','Brown','Buff','Orange','Red','Cinnanmon', 'Yellow'))
+if n=='White':
+  n=0
+elif n=='Pink':
+  n=1
+elif n=='Gray':
+  n=2
+elif n=="Brown":
+  n=3
+elif n=='Buff':
+  n=4
+elif n=="Orange":
+  n=5
+elif n=="Red":
+  n=6
+elif n=="Cinnanmon":
+  n=7
+else:
+  c=8    
+
+o=st.selectbox("SELECT COLOR OF THE BELOW RING:",('White','Pink','Gray','Brown','Buff','Orange','Red','Cinnanmon', 'Yellow'))
+if o=='White':
+  o=0
+elif o=='Pink':
+  o=1
+elif o=='Gray':
+  o=2
+elif o=="Brown":
+  o=3
+elif o=='Buff':
+  o=4
+elif o=="Orange":
+  o=5
+elif o=="Red":
+  o=6
+elif o=="Cinnanmon":
+  o=7
+else:
+  o=8  
+
+p=st.selectbox("SELECT THE VEIL TYPE:",('partial','Universal'))
+if p=='partial':
+  p=0
+else:
+  p=1  
+
+q=st.selectbox("SELECT THE VEILCOLOR:",('White','Brown',"Orange",'Yellow'))
+if q=='White':
+  q=0
+elif q=='Brown':
+  q=1
+elif q=='Orange':
+  q=2
+else:
+  q=3
+
+r=st.selectbox("SELECT THE NUMBER OF RING:",('One','Two','None'))
+if r=='One':
+  r=0
+elif r=='two':
+  r=1
+else:
+  r=2
+
+s=st.selectbox("SELECT YOUR RING TYPE:",('Pendant','Evanescent','Large','Flaring','None'))
+if s=='Pendant':
+  s=0
+elif s=='Evanescent':
+  s=1
+elif s=='Large':
+  s=2
+elif s=="Flaring":
+  s=3
+else:
+  s=4    
+
+t=st.selectbox("SELECT THE SPORE PRINT COLOR:",('White','Brown','Black',"Chocolate",'Green',"Purple",'Orange','Yellow','Buff'))
+if t=='White':
+  t=0
+elif t=='Brown':
+  t=1
+elif t=='Black':
+  t=2
+elif t=="Chocolate":
+  t=3
+elif t=='Green':
+  t=4
+elif t=="Purple":
+  t=5
+elif t=="Orange":
+  t=6
+elif t=="Yellow":
+  t=7
+else:
+  t=8  
+
+u=st.selectbox("SELECT THE POPULATION STATE:",('Several','Solitary','Scattered','Numerous','Abundant','Clustered'))
+if u=='Several':
+  u=0
+elif u=='Solitary':
+  u=1
+elif u=='Scattered':
+  u=2
+elif u=="Numerous":
+  u=3
+elif u=="Abundant":
+  u=4
+else:
+  u=5
+
+v=st.selectbox("SELECT THE HABITAT TYPE:",('Woods','Grasses','Path','Leaves','Urban','Meadows','Waste')) 
+if v=='Woods':
+  v=0
+elif v=='Grasses':
+  v=1
+elif v=='Path':
+  v=2
+elif v=="Leaves":
+  v=3
+elif v=="Urban":
+  v=4
+elif v=="Meadows":
+  v=5  
+else:
+  v=6  
+ 
+result=' '
 if st.button('Predict'):
     result=clf.predict([[a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v]]).squeeze()
     if result==0:
