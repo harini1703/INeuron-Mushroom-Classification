@@ -1,5 +1,5 @@
 import pickle
-pickle_in=open('musroom.pkl','rb')
+pickle_in=open('Mushroom.pkl','rb')
 clf=pickle.load(pickle_in)
 
 import streamlit as st
