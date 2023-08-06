@@ -299,7 +299,7 @@ if st.button('Predict'):
     if result==0:
         st.success('THE MUSHROOM IS POISONOUS')
     else:
-        st.success('THE MUSHROOM IS NOT POISONOUS')
+        st.success('THE MUSHROOM IS NOT POISONOUS') 
 
 
 
